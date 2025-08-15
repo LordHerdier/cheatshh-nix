@@ -22,9 +22,9 @@ Cheatshh is an interactive CLI meant for managing command line cheatsheets, writ
 * [Saving cheatshh](#saving-cheatshh)
 * [Trouble-shooting](#trouble-shooting)
 * [Documentation](#documentation)
-* [Check it out](#check-it-out)
 * [Contributing](#contributing)
     * [Contribution Guidelines](#contribution-guidelines)
+* [Check it out](#check-it-out)
 
 
 # Preview/Screenshots 
@@ -234,9 +234,6 @@ Note: If you are using some other shell like fish or any similar other, configur
 
 Cheatshh is an interactive, easy CLI tool to maintain your custom cheatsheets. You can check our the <a href="https://github.com/AnirudhG07/cheatshh/tree/1.1.1/docs"> docs </a> to see how to use cheatshh.
 
-# Check it out
-Check out my Yazi File manager plugin for cheatshh at [cheatshh.yazi](https://github.com/AnirudhG070/plugins-yazi/tree/main/cheatshh.yazi). You can save your yazi shell commands and easily access them within Yazi.
-
 # Contributing
 
 I would love to take contributions from the community! If you have suggestions for new cheatsheets, improvements to existing ones, or bug fixes, please feel free to submit a pull request. 
@@ -244,3 +241,6 @@ I would love to take contributions from the community! If you have suggestions f
 1) For contribution of a library, it should have a suitable folder name(max 3 words) with commands.json and groups.json, similar to the format in other libraries. The `group` field should be "yes", `bookmark` field should be "no".
 2) For bug fixes, it will be great if you could discuss first in Issues before directly putting a PR. 
 3) It would be great to publish this in other package managers. So I would request help for publishing to different package managers.
+
+# Check it out
+Check out my Yazi File manager plugin for cheatshh at [cheatshh.yazi](https://github.com/AnirudhG070/plugins-yazi/tree/main/cheatshh.yazi). You can save your yazi shell commands and easily access them within Yazi.
