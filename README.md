@@ -12,6 +12,7 @@ Cheatshh is an interactive CLI meant for managing command line cheatsheets, writ
 * [Installation](#installation)
   * [Pip Installation](#pip-installation)
   * [Homebrew Installation](#homebrew-installation)
+  * [Nix / Home Manager](#nix--home-manager)
   * [Manual Installation through git clone](#manual-installation-through-git-clone)
     * [For MacOS and Linux](#for-macos-and-linux)
     * [For Windows](#for-windows)
@@ -79,6 +80,24 @@ brew install cheatshh
 ```
 
 Make sure you have Homebrew installed in your MacOS and it is updated which can be done by running `brew update`.
+
+## Nix / Home Manager
+
+This flake exposes a home-manager module for declarative configuration. Add it as a flake input and enable the module:
+
+```nix
+inputs.cheatshh.url = "github:AnirudhG07/cheatshh";
+
+# inside your home-manager configuration:
+imports = [ inputs.cheatshh.homeManagerModules.cheatshh ];
+
+programs.cheatshh = {
+  enable = true;
+  settings.copyCommand = "wl-copy";  # or xclip, pbcopy, etc.
+};
+```
+
+On first activation, `commands.json` and `groups.json` are seeded automatically. All options (colors, preview width, notes command, etc.) can be set in Nix — see the [Nix home-manager module documentation](docs/nix_home_manager.md) for the full option reference.
 
 ## Manual Installation through git clone
 
@@ -233,6 +252,8 @@ Note: If you are using some other shell like fish or any similar other, configur
 # Documentation
 
 Cheatshh is an interactive, easy CLI tool to maintain your custom cheatsheets. You can check our the <a href="https://github.com/AnirudhG07/cheatshh/tree/1.1.1/docs"> docs </a> to see how to use cheatshh.
+
+- [Nix home-manager module](docs/nix_home_manager.md) — declarative configuration via Nix
 
 # Contributing
 
