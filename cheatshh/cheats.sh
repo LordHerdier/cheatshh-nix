@@ -9,7 +9,7 @@ getConfigValue() {
     local key=$2
     local config_file="$HOME/.config/cheatshh/cheatshh.toml"
 
-    yq ".$section.$key" "$config_file"
+    tomlq -r ".$section.$key" "$config_file"
 }
 copy_command=$(getConfigValue "settings" "copy_command")
 display_man=$(getConfigValue "settings" "man_pages")
