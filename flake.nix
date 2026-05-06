@@ -7,6 +7,12 @@
   };
 
   outputs = { self, nixpkgs, flake-utils }:
+    # homeManagerModules is system-agnostic, so it lives outside eachDefaultSystem
+    # and is merged in with //.
+    {
+      homeManagerModules.cheatshh = import ./nix/hm-module.nix self;
+      homeManagerModules.default  = import ./nix/hm-module.nix self;
+    } //
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
